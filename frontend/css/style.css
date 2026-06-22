@@ -1,0 +1,55 @@
+.about-hero {
+  padding: 70px 0 40px;
+}
+
+.about-hero h1 {
+  font-size: 46px;
+  margin-bottom: 18px;
+  color: #b85c38;
+}
+
+.about-hero p {
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contacts-section {
+  padding: 30px 0 60px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+}
+
+.contacts-card {
+  background: #ffffff;
+  border: 1px solid #ecd8c8;
+  border-radius: 18px;
+  padding: 26px;
+}
+
+.contacts-card h2 {
+  color: #b85c38;
+  margin-top: 0;
+}
+
+.contacts-card p {
+  line-height: 1.6;
+}
+
+.map {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #ecd8c8;
+}
+
+.about-info {
+  padding: 20px 0 80px;
+}
+
+.about-info h2 {
+  color: #b85c38;
+}
