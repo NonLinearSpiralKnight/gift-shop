@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GiftShop — онлайн-магазин подарков</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/adaptive.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">GiftShop</a>
+
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="cart.html">Корзина</a>
+                <a href="about.html">О нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__inner">
+                <div>
+                    <p class="hero__label">Онлайн-магазин подарков</p>
+                    <h1>Подарки для любого повода</h1>
+                    <p class="hero__text">
+                        Выбирайте оригинальные подарки для друзей, семьи и коллег.
+                        Каталог товаров, поиск и корзина доступны прямо на главной странице.
+                    </p>
+                    <a href="#catalog" class="button">Смотреть каталог</a>
+                </div>
+
+                <div class="hero__info">
+                    <h2>Что есть на сайте</h2>
+                    <ul>
+                        <li>каталог всех товаров;</li>
+                        <li>поиск по названию;</li>
+                        <li>карточка товара;</li>
+                        <li>корзина покупок;</li>
+                        <li>контакты магазина.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Каталог подарков</h2>
+                    <p>Найдите подходящий подарок по названию товара.</p>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Поиск подарка..." />
+                </div>
+
+                <div class="catalog-grid" id="productsList">
+                    <article class="product-card">
+                        <div class="product-card__image">🎁</div>
+                        <h3>Подарочный набор</h3>
+                        <p>Универсальный подарок для друзей и коллег.</p>
+                        <span class="product-card__price">1500 ₽</span>
+                        <a href="product.html" class="button button--small">Подробнее</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">🍫</div>
+                        <h3>Сладкий бокс</h3>
+                        <p>Набор сладостей в праздничной упаковке.</p>
+                        <span class="product-card__price">1200 ₽</span>
+                        <a href="product.html" class="button button--small">Подробнее</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image">🌸</div>
+                        <h3>Букет цветов</h3>
+                        <p>Свежий букет для особого случая.</p>
+                        <span class="product-card__price">2000 ₽</span>
+                        <a href="product.html" class="button button--small">Подробнее</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© 2026 GiftShop</p>
+            <p>Проектный практикум</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
