@@ -1,0 +1,23 @@
+@media (max-width: 800px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 46px 0 24px;
+  }
+
+  .about-hero h1 {
+    font-size: 30px;
+  }
+
+  .contacts-card {
+    padding: 20px;
+  }
+}
