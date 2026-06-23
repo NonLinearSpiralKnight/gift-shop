@@ -1,45 +1,65 @@
-const products = [
-    {
-        id: 1,
-        name: 'Подарочный набор',
-        description: 'Универсальный подарок для друзей и коллег',
-        price: 1500,
-        image: 'gift1.jpg',
-    },
-    {
-        id: 2,
-        name: 'Сладкий бокс',
-        description: 'Набор шоколада и конфет в праздничной упаковке',
-        price: 1200,
-        image: 'gift2.jpg',
-    },
-    {
-        id: 3,
-        name: 'Букет цветов',
-        description: 'Свежий букет для особого случая',
-        price: 2000,
-        image: 'gift3.jpg',
-    },
-];
+const db = require('../database');
 
+// Получить все товары
 function getAllProducts(req, res) {
-    res.json(products);
+    const query = `
+        SELECT products.id,
+               products.name,
+               products.description,
+               products.price,
+               products.image,
+               categories.name AS category
+        FROM products
+        LEFT JOIN categories
+        ON products.category_id = categories.id
+    `;
+
+    db.all(query, [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({
+                error: err.message
+            });
+        }
+
+        res.json(rows);
+    });
 }
 
+// Получить товар по ID
 function getProductById(req, res) {
-    const productId = Number(req.params.id);
-    const product = products.find((item) => item.id === productId);
+    const id = req.params.id;
 
-    if (!product) {
-        return res.status(404).json({
-            message: 'Товар не найден',
-        });
-    }
+    const query = `
+        SELECT products.id,
+               products.name,
+               products.description,
+               products.price,
+               products.image,
+               categories.name AS category
+        FROM products
+        LEFT JOIN categories
+        ON products.category_id = categories.id
+        WHERE products.id = ?
+    `;
 
-    return res.json(product);
+    db.get(query, [id], (err, row) => {
+        if (err) {
+            return res.status(500).json({
+                error: err.message
+            });
+        }
+
+        if (!row) {
+            return res.status(404).json({
+                message: "Product not found"
+            });
+        }
+
+        res.json(row);
+    });
 }
 
 module.exports = {
     getAllProducts,
-    getProductById,
+    getProductById
 };
