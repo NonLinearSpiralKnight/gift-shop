@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина | GiftShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🎁 GiftShop</h1>
+
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="cart.html" class="active">Корзина</a>
+                <a href="about.html">О нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2 class="page-title">Корзина</h2>
+
+        <div id="cartItems" class="cart-items">
+            <!-- товары будут подгружаться через JS -->
+        </div>
+
+        <div class="cart-summary">
+            <h3>Итого:</h3>
+            <div id="cartTotal" class="cart-total">0 ₽</div>
+            <div class="checkout-form">
+                <label for="customerEmail">Email для связи</label>
+                <input type="email" id="customerEmail" placeholder="example@mail.ru" required />
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Оформить заказ
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 GiftShop</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>
