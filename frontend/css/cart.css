@@ -1,0 +1,146 @@
+/* ===== ОБЩИЙ КОНТЕЙНЕР ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.page-title {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+/* ===== СПИСОК ТОВАРОВ ===== */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== ОДИН ТОВАР В КОРЗИНЕ ===== */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* название товара */
+.cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* цена */
+.cart-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* кнопка удаления */
+.cart-item button {
+    padding: 8px 12px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background: #e60000;
+}
+
+/* ===== ИТОГО ===== */
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid #eee;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* сумма */
+.cart-total {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* кнопка оформления */
+.checkout-btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background: #45a049;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* навигация */
+.nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.checkout-form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkout-form label {
+    font-weight: 700;
+}
+
+.checkout-form input {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px 14px;
+    border: 1px solid #dfc3b1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.checkout-form input:focus {
+    outline: none;
+    border-color: #b85c38;
+}
